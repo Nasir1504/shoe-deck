@@ -82,7 +82,7 @@ function App() {
       setNavID(navID = navID + 1)
 
     }
-    handleClick(navID, 'smooth')
+    handleClick(navID, 'instant')
   }
 
   function handleLeftClick() {
@@ -94,7 +94,7 @@ function App() {
       setNavID(navID = navID - 1)
 
     }
-    handleClick(navID, 'smooth')
+    handleClick(navID, 'instant')
   }
 
   useEffect(() => {
@@ -175,7 +175,7 @@ function App() {
       <div style={{ minWidth: "100%" }} ref={ref3}><SolutionComp /></div>
       <div style={{ minWidth: "100%" }} ref={ref4}><MarketScopeComp /></div>
 
-      <div style={{ minWidth: "100%" }} ref={ref5}><MarketingComp /></div>
+      <div style={{ minWidth: "100%" }} ref={ref5}><MarketingComp NavID={navID} /></div>
       <div style={{ minWidth: "100%" }} ref={ref6}><ProductShowcase /></div>
       <div style={{ minWidth: "100%" }} ref={ref7}><CompetitionComp /></div>
       <div style={{ minWidth: "100%" }} ref={ref8}><CompetitiveAdvantageComp /></div>

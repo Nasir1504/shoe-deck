@@ -79,7 +79,7 @@ export default function OurHeadTeam() {
                             ID={3}
                             HeadTeam={true}
                             ProImg={Profile3}
-                            Name='Dayaram Prajapati'
+                            Name='Rahul Ahuja'
                             Designation='Founder'
 
                         />

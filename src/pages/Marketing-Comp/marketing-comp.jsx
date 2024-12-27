@@ -12,8 +12,7 @@ import Frame2 from 'assets/imgs/marketing/frame661.png';
 import NikeRed from 'assets/imgs/marketing/nike-red-logo.png';
 
 
-export default function MarketingComp() {
-    const [trigger, setTrigger] = useState(false);
+export default function MarketingComp({ NavID }) {
     const [coords, setCoords] = useState({ x: 0, y: 0 });
     const [cardNum, setCardNum] = useState(-1)
 
@@ -35,7 +34,7 @@ export default function MarketingComp() {
     }, []);
 
     useMemo(() => {
-        trigger && cardNum === -1 && setTimeout(() => {
+        NavID === 4 && cardNum === -1 && setTimeout(() => {
             setCardNum(0)
         }, 2000);
         cardNum === 0 && setTimeout(() => {
@@ -73,13 +72,10 @@ export default function MarketingComp() {
             setCardNum(9)
         }, 1500);
 
-    }, [trigger, cardNum])
-
+    }, [NavID, cardNum])
 
     return (
-        <div className="marketing-comp-main-container"
-            onMouseOver={() => { setTrigger(true) }}
-        >
+        <div className="marketing-comp-main-container" >
 
             <div className="heading-section">
                 {/* {cardNum} */}
@@ -87,7 +83,7 @@ export default function MarketingComp() {
                     <p className="h-one h-part">
                         <span className="span1"
                             style={{
-                                clip: trigger && 'rect(0px, 15vw, 5vw, 0px)'
+                                clip: NavID === 4 && 'rect(0px, 15vw, 5vw, 0px)'
                             }}
                         >
                             <strong>M</strong>
@@ -97,13 +93,13 @@ export default function MarketingComp() {
 
                     <p className="h-two h-part"
                         style={{
-                            marginLeft: trigger && '-0.2em',
+                            marginLeft: NavID === 4 && '-0.2em',
 
                         }}
                     >
                         <span className="span1"
                             style={{
-                                clip: trigger && 'rect(0px, 15vw, 5vw, 0px)'
+                                clip: NavID === 4 && 'rect(0px, 15vw, 5vw, 0px)'
                             }}
                         >
                             <strong>E</strong>
@@ -113,12 +109,12 @@ export default function MarketingComp() {
 
                     <p className="h-three h-part"
                         style={{
-                            marginLeft: trigger && '-0.2em',
+                            marginLeft: NavID === 4 && '-0.2em',
                         }}
                     >
                         <span className="span1"
                             style={{
-                                clip: trigger && 'rect(0px, 15vw, 5vw, 0px)'
+                                clip: NavID === 4 && 'rect(0px, 15vw, 5vw, 0px)'
                             }}
                         >
                             <strong>A</strong>
@@ -135,7 +131,7 @@ export default function MarketingComp() {
             <div className="bottom-section">
                 <div className="foot-path-section"
                     style={{
-                        display: !trigger && 'none',
+                        display: NavID !== 4 && 'none',
                         transition: cardNum < 9 && '0.6s cubic-bezier(.45, 1.09, .57, 1.11)',
                         maskImg: `url(${maskImg})`,
                         WebkitMaskImage: `url(${maskImg})`,
@@ -238,9 +234,9 @@ export default function MarketingComp() {
                     <img src={footPathImg} alt="" className="foot-path-img"
                         style={{
                             clip:
-                                trigger && cardNum === -1 ? 'rect(0px, 100vw, 400vh, 0px)' :
-                                    trigger && cardNum >= 2 && cardNum < 9 ? 'rect(0px, 100vw, 400vh, 100vw)' :
-                                        trigger && cardNum === 9 && 'rect(0px, 100vw, 400vh, 0vw)',
+                                NavID === 4 && cardNum === -1 ? 'rect(0px, 100vw, 400vh, 0px)' :
+                                    NavID === 4 && cardNum >= 2 && cardNum < 9 ? 'rect(0px, 100vw, 400vh, 100vw)' :
+                                        NavID === 4 && cardNum === 9 && 'rect(0px, 100vw, 400vh, 0vw)',
 
                             opacity: cardNum >= 1 && '1'
                         }}
