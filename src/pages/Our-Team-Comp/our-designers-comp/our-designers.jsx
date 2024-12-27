@@ -28,7 +28,7 @@ export default function OurDesigners() {
                             Dir='down'
                             BGC1='0C94FD'
                             BGC2=' rgba(0,0,0,1)'
-                            ProImg={Profile1}
+                            ProImg={Profile2}
 
                         />
                     </div>
@@ -43,7 +43,7 @@ export default function OurDesigners() {
                             Dir='up'
                             BGC1='FF0000'
                             BGC2=' rgba(0,0,0,1)'
-                            ProImg={Profile2}
+                            ProImg={Profile1}
 
                         />
                     </div>

@@ -6,7 +6,6 @@ import './our-developer.scss';
 //components
 import PolygonVectorComp from '../Polygon-Vector-Comp/polygon-vector-comp';
 
-
 //imgs
 import Profile1 from 'assets/imgs/our-teams/profile11.png';
 import Profile2 from 'assets/imgs/our-teams/profile12.png';

@@ -24,13 +24,15 @@ export default function OurHeadTeam() {
                     <div className="card-inner" >
                         <PolygonVectorComp
                             Dir='down'
-                            BGC1='fff000'
+                            BGC1='BB0B14'
                             BGC2=' rgba(0,0,0,1)'
                             CardID={cardID}
                             SetCardID={setCardID}
                             ID={1}
-                            // HeadTeam = {true}
+                            HeadTeam={true}
                             ProImg={Profile1}
+                            Name='Nasir Aftab'
+                            Designation='CEO'
 
                         />
                     </div>
@@ -48,13 +50,15 @@ export default function OurHeadTeam() {
                     >
                         <PolygonVectorComp
                             Dir='up'
-                            BGC1='fff000'
+                            BGC1='BB0B14'
                             BGC2=' rgba(0,0,0,1)'
                             CardID={cardID}
                             SetCardID={setCardID}
                             ID={2}
                             HeadTeam={true}
                             ProImg={Profile2}
+                            Name='Gaurav Srivastava'
+                            Designation='Director'
 
                         />
                     </div>
@@ -68,13 +72,15 @@ export default function OurHeadTeam() {
                     >
                         <PolygonVectorComp
                             Dir='down'
-                            BGC1='fff000'
+                            BGC1='BB0B14'
                             BGC2=' rgba(0,0,0,1)'
                             CardID={cardID}
                             SetCardID={setCardID}
                             ID={3}
                             HeadTeam={true}
                             ProImg={Profile3}
+                            Name='Dayaram Prajapati'
+                            Designation='Founder'
 
                         />
                     </div>
@@ -96,13 +102,15 @@ export default function OurHeadTeam() {
                     >
                         <PolygonVectorComp
                             Dir='down'
-                            BGC1='fff000'
+                            BGC1='BB0B14'
                             BGC2=' rgba(0,0,0,1)'
                             CardID={cardID}
                             SetCardID={setCardID}
                             ID={4}
                             HeadTeam={true}
                             ProImg={Profile4}
+                            Name='Deepika Yadav'
+                            Designation='HR'
 
                         />
                     </div>

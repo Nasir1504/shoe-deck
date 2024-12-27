@@ -9,7 +9,7 @@ export default function ThankYouComp() {
     return (
         <div className="thank-you-comp-main-container" >
 
-            THANK YOU
+            <b>THANK YOU</b>
         </div >
     )
 }
