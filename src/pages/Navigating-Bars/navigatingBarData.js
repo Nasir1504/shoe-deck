@@ -3,7 +3,7 @@
 import competitiveAdvantage from 'assets/imgs/navbar/competitive-advantage.png';
 import competition from 'assets/imgs/navbar/competition.png';
 import home from 'assets/imgs/navbar/home.png';
-import thanku from 'assets/imgs/navbar/thanku.png';
+// import thanku from 'assets/imgs/navbar/thanku.png';
 import marketing from 'assets/imgs/navbar/marketing.png';
 import problem from 'assets/imgs/navbar/problem.png';
 import scope from 'assets/imgs/navbar/scope.png';
@@ -66,10 +66,10 @@ export const NAVIGATING_BAR_DATA = [
         shortName: "OUR TEAM"
 
     },
-    {
-        imgURL1: thanku,
-        name: "THANK YOU",
-        shortName: "THANK YOU"
+    // {
+    //     imgURL1: thanku,
+    //     name: "THANK YOU",
+    //     shortName: "THANK YOU"
 
-    }
+    // }
 ];

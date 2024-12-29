@@ -16,7 +16,7 @@ import ProductShowcase from "./pages/Product-Showcase/product-showcase";
 import CompetitionComp from "./pages/Competition-Comp/competition-comp";
 import CompetitiveAdvantageComp from "./pages/Competitive-Advantage-Comp/competitive-advantage-comp";
 import OurTeamComp from "./pages/Our-Team-Comp/our-team-comp";
-import ThankYouComp from "./pages/Thank-You-Comp/thank-you-comp";
+// import ThankYouComp from "./pages/Thank-You-Comp/thank-you-comp";
 
 
 // --------------------------------------
@@ -53,7 +53,7 @@ function App() {
   const ref8 = useRef(null);
 
   const ref9 = useRef(null);
-  const ref10 = useRef(null);
+  // const ref10 = useRef(null);
 
 
   const handleClick = (id, behave) => {
@@ -68,7 +68,7 @@ function App() {
     id === 7 && ref8.current.scrollIntoView({ behavior: behave });
 
     id === 8 && ref9.current.scrollIntoView({ behavior: behave });
-    id === 9 && ref10.current.scrollIntoView({ behavior: behave });
+    // id === 9 && ref10.current.scrollIntoView({ behavior: behave });
     // console.log(behave)
     setNavID(id)
 
@@ -181,7 +181,7 @@ function App() {
       <div style={{ minWidth: "100%" }} ref={ref8}><CompetitiveAdvantageComp /></div>
 
       <div style={{ minWidth: "100%" }} ref={ref9}><OurTeamComp MainNavID={navID} /></div>
-      <div style={{ minWidth: "100%" }} ref={ref10}><ThankYouComp /></div>
+      {/* <div style={{ minWidth: "100%" }} ref={ref10}><ThankYouComp /></div> */}
 
 
 
