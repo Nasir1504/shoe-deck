@@ -180,7 +180,7 @@ function App() {
       <div style={{ minWidth: "100%" }} ref={ref7}><CompetitionComp /></div>
       <div style={{ minWidth: "100%" }} ref={ref8}><CompetitiveAdvantageComp /></div>
 
-      <div style={{ minWidth: "100%" }} ref={ref9}><OurTeamComp /></div>
+      <div style={{ minWidth: "100%" }} ref={ref9}><OurTeamComp MainNavID={navID} /></div>
       <div style={{ minWidth: "100%" }} ref={ref10}><ThankYouComp /></div>
 
 

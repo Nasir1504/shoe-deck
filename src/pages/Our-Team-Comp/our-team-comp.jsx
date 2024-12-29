@@ -8,6 +8,7 @@ import "./our-team-comp.scss";
 import OurDesigners from "./our-designers-comp/our-designers";
 import OurDeveloper from "./our-developer-comp/our-developer";
 import OurHeadTeam from "./our-head-team-comp/our-head-team";
+import ShoeVector from "./shoe-vector/ShoeVector";
 
 // images
 import shoeVectorOne from 'assets/imgs/our-teams/shoe-vector-one.png';
@@ -16,15 +17,14 @@ import shoeMark from 'assets/imgs/our-teams/shoe-mark.png';
 import logo from 'assets/imgs/extras/nike-logo.png';
 
 
-export default function OurTeamComp() {
+
+export default function OurTeamComp({ MainNavID }) {
 
     const [navID, setNavID] = useState(0)
-
-    const [hiddenLayer, setHiddenLayer] = useState(false)
     const [trigger, setTrigger] = useState(false)
 
     useMemo(() => {
-        if (hiddenLayer && !trigger) {
+        if (MainNavID === 8 && !trigger) {
             navID === 0 ? setTimeout(() => {
                 setNavID(1)
             }, 1500) :
@@ -34,17 +34,12 @@ export default function OurTeamComp() {
                 }, 3500)
 
         }
-    }, [hiddenLayer, navID, trigger])
+    }, [MainNavID, navID, trigger])
+
 
     return (
         <div className="our-team-comp-main-container" >
 
-            <div className="hidden-layer"
-                style={{
-                    display: hiddenLayer && 'none'
-                }}
-                onMouseOver={() => { setHiddenLayer(true) }}
-            />
 
             <div className="teams-navbar">
                 <div className="top-layer" style={{ display: trigger && 'none' }} />
@@ -101,6 +96,10 @@ export default function OurTeamComp() {
             </div>
 
             {/* ----------------------------------------------------------- */}
+            <div className="shoe-vector-img"><ShoeVector MainNavID={MainNavID} NavID={navID} /></div>
+
+            {/* ----------------------------------------------------------- */}
+
 
             <div className="designer-heading"
                 style={{
