@@ -22,9 +22,11 @@ import OurTeamComp from "./pages/Our-Team-Comp/our-team-comp";
 // --------------------------------------
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+
+// --------------------------------------
 import PhoneRotationComp from "./components/Phone-Rotation-Comp/phone-rotation-comp";
 import NavigatingBar from './pages/Navigating-Bars/navigating-bar';
-
+import FullScreenBtn from "components/FullScreen-Btn-Comp/fullscreen-btn";
 
 
 function App() {
@@ -32,6 +34,7 @@ function App() {
   const [navbarVisibility, setNavbarVisibility] = useState(false);
   let mediaQuery = window.matchMedia(`(max-width: 630px)`);
   const [query, setQuery] = useState(mediaQuery.matches);
+  const [isScreenSmall, setIsScreenSmall] = useState(window.innerWidth < 920);
 
 
   function handleNavbarVisibilityTrue() {
@@ -114,15 +117,16 @@ function App() {
   }, [mediaQuery]);
 
 
-  function handleOnLoadPhoneRotateEven() {
-    setQuery(false)
-  }
+  // function handleOnLoadPhoneRotateEven() {
+  //   setQuery(false)
+  // }
+
 
 
   return (
     <div className="app-main">
       <div className="phone-rotation-indication-div"
-        onClick={handleOnLoadPhoneRotateEven}
+        // onClick={handleOnLoadPhoneRotateEven}
         style={{
           display: !query && "none"
         }}
@@ -168,6 +172,17 @@ function App() {
           }}
         />
 
+      </div>
+
+      <div className="full-screen-btn"
+        style={{
+          display: !isScreenSmall && 'none'
+        }}
+      >
+        <FullScreenBtn
+          IsScreenSmall={isScreenSmall}
+          SetIsScreenSmall={setIsScreenSmall}
+        />
       </div>
 
       <div style={{ minWidth: "100%" }} ref={ref1}><WelcomeComp /></div>

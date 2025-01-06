@@ -150,6 +150,26 @@ body {
       transition: 0.2s ease-in-out;
     }
   }
+
+
+  .full-screen-btn {
+    position: fixed;
+    top: 5%;
+    right: 2%;
+    z-index: 5;
+    width: 12vw;
+    height: 3vw;
+    border-radius: 0.6vw;
+    backdrop-filter: blur(10px);
+    // border: 0.1vw solid #C8E404;
+    background: linear-gradient(152deg, #e50b1600 19%, #E50B17 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1px;
+    opacity: 0.8;
+    cursor: pointer;
+  }
 }
 
 //--------------------------  max-width: 1650px  --------------------------------------
